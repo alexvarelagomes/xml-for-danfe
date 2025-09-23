@@ -24,8 +24,13 @@ A aplicação foi construída utilizando Python e um ecossistema de bibliotecas 
 
 Bibliotecas e suas	Finalidades:
 Streamlit -	Framework principal para a construção da interface web interativa.
+
 BrazilFiscalReport - Biblioteca especializada na geração de DANFEs em PDF a partir de dados de XML fiscal.
+
 lxml -	Utilizada para o parsing eficiente do XML, permitindo a extração de dados como o número e a chave da NF-e.
-Pandas e NumPy - Dependências da biblioteca BrazilFiscalReport, utilizadas para a manipulação de dados em memória.
+
+Pandas e NumPy - Dependências da biblioteca BrazilFiscalReport, utilizadas para a manipulação de dados em memória.  
+
 Docker - Ferramenta de containerização utilizada para empacotar a aplicação e suas dependências em uma imagem.
+
 Docker Compose - Orquestrador para simplificar a execução do container da aplicação.
