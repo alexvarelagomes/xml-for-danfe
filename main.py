@@ -144,3 +144,8 @@ st.markdown(
     "<p style='text-align: center; font-size: 14px; color: grey;'>Desenvolvido por ALEX VARELA.</p>",
     unsafe_allow_html=True
 )
+
+st.markdown(
+    "<p style='text-align: center; font-size: 14px; color: grey;'>GitHub: https://github.com/alexvarelagomes</p>",
+    unsafe_allow_html=True
+)
