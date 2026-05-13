@@ -33,7 +33,7 @@ O foco principal é a **eficiência operacional** e a **experiência do usuário
 ### Execução Local (com uv)
 ```bash
 # Clone o repositório
-git clone git@github.com:alexvarelagomes/xml-for-danfe.git
+git clone https://github.com/alexvarelagomes/xml-for-danfe.git
 cd xml-for-danfe
 
 # Instale as dependências
