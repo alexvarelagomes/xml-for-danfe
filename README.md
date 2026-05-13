@@ -1,7 +1,7 @@
 # XML for DANFE
 
 ## Visão Geral
-Este projeto é uma ferramenta web robusta projetada para automatizar a conversão de arquivos XML de Notas Fiscais Eletrônicas (NF-e) em seus respectivos Documentos Auxiliares (DANFE) em formato PDF.
+Este projeto é uma ferramenta web projetada para automatizar a conversão de arquivos XML de Notas Fiscais Eletrônicas (NF-e) em seus respectivos Documentos Auxiliares (DANFE) em formato PDF.
 
 O foco principal é a **eficiência operacional** e a **experiência do usuário**, permitindo que contadores e departamentos fiscais processem volumes significativos de documentos sem a necessidade de softwares complexos ou instalações locais pesadas.
 
@@ -21,7 +21,7 @@ O foco principal é a **eficiência operacional** e a **experiência do usuário
 * **Geração de Relatórios:** **brazilfiscalreport**, biblioteca especializada no padrão fiscal brasileiro.  
 * **Parsing de XML:** **lxml**, utilizada pela sua alta performance em processamento de grandes estruturas XML.
 * **Gerenciamento de Ambiente:** **uv**. Optei pelo `uv` por ser o gerenciador de pacotes mais rápido do ecossistema Python atual, garantindo builds determinísticos via `uv.lock`.
-* **Containerização:** **Docker**, garantindo que a aplicação rode de forma idêntica em qualquer ambiente (dev/prod), com otimização de camadas para redução de peso da imagem.
+* **Containerização:** **Docker**, garantindo que a aplicação rode de forma idêntica em qualquer ambiente com otimização de camadas para redução de peso da imagem.
 
 ---
 
