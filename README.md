@@ -61,5 +61,6 @@ docker run -p 8501:8501 xml-for-danfe
 
 * **main.py:** Entrada da aplicação e lógica da interface UI.
 * **danfegerador.py:** Lógica de negócio e motor de geração do PDF.
+* **extrairxml.py:** leitura do XML de Nota Fiscal Eletrônica (NFe) para extrair o número da NFe e a chave de acesso.
 * **pyproject.toml / uv.lock:** Gestão rigorosa de dependências.
 * **Dockerfile:** Configuração de infraestrutura para deploy.
