@@ -32,7 +32,7 @@ with st.form("formulario_processamento"):
         type=None,
         help="Carregue um arquivo do tipo .xml ou um .zip."
     )
-    submitted = st.form_submit_button('EXECUTAR PROCESSAMENTO')
+    submitted = st.form_submit_button('Processar Documento(s)')
 
 # Processamento do Arquivo Carregado.
 if uploaded_file and submitted:
