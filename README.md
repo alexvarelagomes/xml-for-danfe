@@ -45,8 +45,11 @@ uv run streamlit run main.py
 
 ### Execução via Docker
 ```bash
-# O projeto possui um Dockerfile otimizado. Para rodar o container:
+
+# Cria a imagem
 docker build -t xml-for-danfe .
+
+# Inicia o container
 docker run -p 8501:8501 xml-for-danfe
 
 Acesso: Abra http://localhost:8501 no seu navegador.
