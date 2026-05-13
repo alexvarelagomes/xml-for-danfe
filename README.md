@@ -41,6 +41,7 @@ uv sync
 
 # Rode a aplicação
 uv run streamlit run main.py
+```
 
 ### Execução via Docker
 ```bash
@@ -49,7 +50,8 @@ docker build -t xml-for-danfe .
 docker run -p 8501:8501 xml-for-danfe
 
 Acesso: Abra http://localhost:8501 no seu navegador.
-
+```
+--- 
 
 ## 🏗️ Estrutura do Projeto
 
