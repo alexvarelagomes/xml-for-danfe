@@ -41,3 +41,19 @@ uv sync
 
 # Rode a aplicação
 uv run streamlit run main.py
+
+### Execução via Docker
+```bash
+# O projeto possui um Dockerfile otimizado. Para rodar o container:
+docker build -t xml-for-danfe .
+docker run -p 8501:8501 xml-for-danfe
+
+Acesso: Abra http://localhost:8501 no seu navegador.
+
+
+## 🏗️ Estrutura do Projeto
+
+main.py: Entrada da aplicação e lógica da interface UI.
+danfegerador.py: Lógica de negócio e motor de geração do PDF.
+pyproject.toml / uv.lock: Gestão rigorosa de dependências.
+Dockerfile: Configuração de infraestrutura para deploy.
