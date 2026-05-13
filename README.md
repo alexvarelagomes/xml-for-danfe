@@ -58,10 +58,7 @@ Acesso: Abra http://localhost:8501 no seu navegador.
 
 ## Estrutura do Projeto
 
-main.py: Entrada da aplicação e lógica da interface UI.
-
-danfegerador.py: Lógica de negócio e motor de geração do PDF.
-
-pyproject.toml / uv.lock: Gestão rigorosa de dependências.
-
-Dockerfile: Configuração de infraestrutura para deploy.
+* **main.py:** Entrada da aplicação e lógica da interface UI.
+* **danfegerador.py:** Lógica de negócio e motor de geração do PDF.
+* **pyproject.toml / uv.lock:** Gestão rigorosa de dependências.
+* **Dockerfile:** Configuração de infraestrutura para deploy.
