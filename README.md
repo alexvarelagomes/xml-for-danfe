@@ -33,7 +33,7 @@ O foco principal é a **eficiência operacional** e a **experiência do usuário
 ### Execução Local (com uv)
 ```bash
 # Clone o repositório
-git clone [git@github.com:alexvarelagomes/xml-for-danfe.git](git@github.com:alexvarelagomes/xml-for-danfe.git)
+git clone git@github.com:alexvarelagomes/xml-for-danfe.git
 cd xml-for-danfe
 
 # Instale as dependências
@@ -53,7 +53,7 @@ docker build -t xml-for-danfe .
 docker run -p 8501:8501 xml-for-danfe
 ```
 
-Acesso: Abra http://localhost:8501 no seu navegador.
+> **Acesso:** Abra `http://localhost:8501` no seu navegador.
 
 --- 
 
