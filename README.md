@@ -16,7 +16,7 @@ O foco principal é a **eficiência operacional** e a **experiência do usuário
 ---
 
 ## Stack Tecnológica e Decisões Arquiteturais
-* **Linguagem:** Python
+* **Linguagem:** Python 3.13
 * **Interface:** **Streamlit**, escolhido pela agilidade no desenvolvimento de ferramentas de dados.
 * **Geração de Relatórios:** **brazilfiscalreport**, biblioteca especializada no padrão fiscal brasileiro.  
 * **Parsing de XML:** **lxml**, utilizada pela sua alta performance em processamento de grandes estruturas XML.
