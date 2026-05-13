@@ -51,9 +51,10 @@ docker build -t xml-for-danfe .
 
 # Inicia o container
 docker run -p 8501:8501 xml-for-danfe
+```
 
 Acesso: Abra http://localhost:8501 no seu navegador.
-```
+
 --- 
 
 ## Estrutura do Projeto
