@@ -1,5 +1,7 @@
 # XML for DANFE
 
+**Aplicação em Produção**: [Acesse o Gerador DANFE](https://xml-for-danfe.streamlit.app/)
+
 ## Visão Geral
 Este projeto é uma ferramenta web projetada para automatizar a conversão de arquivos XML de Notas Fiscais Eletrônicas (NF-e) em seus respectivos Documentos Auxiliares (DANFE) em formato PDF.
 
@@ -8,20 +10,20 @@ O foco principal é a **eficiência operacional** e a **experiência do usuário
 ---
 
 ## Funcionalidades Principais
-* **Upload Flexível:** Suporte para arquivos XML individuais ou múltiplos arquivos compactados em formato `.zip`.
-* **Extração Inteligente:** Identificação automática do número da NF-e e da chave de acesso via XPath para nomeação organizada dos arquivos gerados.
-* **Processamento em Memória:** A geração dos PDFs ocorre em buffers de memória (`io.BytesIO`), garantindo velocidade e evitando o acúmulo de arquivos temporários no servidor.  
-* **Interface Intuitiva:** Dashboard desenvolvido em Streamlit com feedback visual em tempo real e botões de download direto.
+* **Upload Flexível**: Suporte para arquivos XML individuais ou múltiplos arquivos compactados em formato `.zip`.
+* **Extração Inteligente**: Identificação automática do número da NF-e e da chave de acesso via XPath para nomeação organizada dos arquivos gerados.
+* **Processamento em Memória**: A geração dos PDFs ocorre em buffers de memória (`io.BytesIO`), garantindo velocidade e evitando o acúmulo de arquivos temporários no servidor.  
+* **Interface Intuitiva**: Dashboard desenvolvido em Streamlit com feedback visual em tempo real e botões de download direto.
 
 ---
 
 ## Stack Tecnológica e Decisões Arquiteturais
-* **Linguagem:** Python 3.13
-* **Interface:** **Streamlit**, escolhido pela agilidade no desenvolvimento de ferramentas de dados.
-* **Geração de Relatórios:** **brazilfiscalreport**, biblioteca especializada no padrão fiscal brasileiro.  
-* **Parsing de XML:** **lxml**, utilizada pela sua alta performance em processamento de grandes estruturas XML.
-* **Gerenciamento de Ambiente:** **uv**. Optei pelo `uv` por ser o gerenciador de pacotes mais rápido do ecossistema Python atual, garantindo builds determinísticos via `uv.lock`.
-* **Containerização:** **Docker**, garantindo que a aplicação rode de forma idêntica em qualquer ambiente com otimização de camadas para redução de peso da imagem.
+* **Linguagem**: Python 3.13
+* **Interface**: **Streamlit**, escolhido pela agilidade no desenvolvimento de ferramentas de dados.
+* **Geração de Relatórios**: **brazilfiscalreport**, biblioteca especializada no padrão fiscal brasileiro.  
+* **Parsing de XML**: **lxml**, utilizada pela sua alta performance em processamento de grandes estruturas XML.
+* **Gerenciamento de Ambiente**: **uv**. Optei pelo `uv` por ser o gerenciador de pacotes mais rápido do ecossistema Python atual, garantindo builds determinísticos via `uv.lock`.
+* **Containerização**: **Docker**, garantindo que a aplicação rode de forma idêntica em qualquer ambiente com otimização de camadas para redução de peso da imagem.
 
 ---
 
@@ -45,7 +47,6 @@ uv run streamlit run main.py
 
 ### Execução via Docker
 ```bash
-
 # Cria a imagem
 docker build -t xml-for-danfe .
 
@@ -53,14 +54,14 @@ docker build -t xml-for-danfe .
 docker run -p 8501:8501 xml-for-danfe
 ```
 
-> **Acesso:** Abra `http://localhost:8501` no seu navegador.
+> **Acesso**: Abra `http://localhost:8501` no seu navegador.
 
 --- 
 
 ## Estrutura do Projeto
 
-* **main.py:** Entrada da aplicação e lógica da interface UI.
-* **danfegerador.py:** Lógica de negócio e motor de geração do PDF.
-* **extrairxml.py:** leitura do XML de Nota Fiscal Eletrônica (NFe) para extrair o número da NFe e a chave de acesso.
-* **pyproject.toml / uv.lock:** Gestão rigorosa de dependências.
-* **Dockerfile:** Configuração de infraestrutura para deploy.
+* **main.py**: Entrada da aplicação e lógica da interface UI.
+* **danfegerador.py**: Lógica de negócio e motor de geração do PDF.
+* **extrairxml.py**: Leitura do XML de Nota Fiscal Eletrônica (NF-e) para extrair o número da NF-e e a chave de acesso.
+* **pyproject.toml** / **uv.lock**: Gestão rigorosa de dependências.
+* **Dockerfile**: Configuração de infraestrutura para deploy.
