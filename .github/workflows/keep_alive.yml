@@ -1,0 +1,16 @@
+name: Streamlit Keep Alive
+
+on:
+  schedule:
+    # Executa a cada 12 horas todos os dias.
+    - cron: '0 */12 * * *'
+  # Botão de teste manual.
+  workflow_dispatch:
+
+jobs:
+  ping_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reativar aplicação xml-for-danfe
+        run: |
+          curl -sI https://xml-for-danfe.streamlit.app/ | head -n 1
