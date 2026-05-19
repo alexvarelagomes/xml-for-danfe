@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Reativar aplicação xml-for-danfe
         run: |
-          curl -sL -o /dev/null -w "%{http_code}\n" https://xml-for-danfe.streamlit.app/
+          curl -sL https://xml-for-danfe.streamlit.app
