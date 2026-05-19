@@ -12,5 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Reativar aplicação xml-for-danfe
-        run: |
-          curl -sL -o /dev/null -w "%{http_code}\n" https://xml-for-danfe.streamlit.app/
+        run: curl -sL https://xml-for-danfe.streamlit.app
