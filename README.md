@@ -24,6 +24,8 @@ O foco principal é a **eficiência operacional** e a **experiência do usuário
 * **Parsing de XML**: **lxml**, utilizada pela sua alta performance em processamento de grandes estruturas XML.
 * **Gerenciamento de Ambiente**: **uv**. Optei pelo `uv` por ser o gerenciador de pacotes mais rápido do ecossistema Python atual, garantindo builds determinísticos via `uv.lock`.
 * **Containerização**: **Docker**, garantindo que a aplicação rode de forma idêntica em qualquer ambiente com otimização de camadas para redução de peso da imagem.
+* **Automação e CI/CD**: **GitHub Actions**, configurado para executar a rotina automatizada de monitoramento e preventiva de hibernação.
+* **Automação de Navegador**: **Playwright**, utilizado em modo *headless* para simular interação humana legítima e garantir a disponibilidade do ambiente de produção.
 
 ---
 
@@ -65,3 +67,11 @@ docker run -p 8501:8501 xml-for-danfe
 * **extrairxml.py**: Leitura do XML de Nota Fiscal Eletrônica (NF-e) para extrair o número da NF-e e a chave de acesso.
 * **pyproject.toml** / **uv.lock**: Gestão rigorosa de dependências.
 * **Dockerfile**: Configuração de infraestrutura para deploy.
+* **.github/workflows/keep_alive.yml**: Pipeline de CI/CD que gerencia o agendamento (cron job) do robô de reativação.
+* **keep_alive.py**: Script de automação utilizando Playwright para contornar a hibernação do Streamlit Cloud.
+
+--- 
+
+## Sustentação e Disponibilidade
+
+Para contornar a hibernação por inatividade do Streamlit Community Cloud, o projeto conta com um robô de monitoramento. A cada 12 horas, um workflow do GitHub Actions é disparado, executando o script `keep_alive.py`. Este script utiliza o Playwright para simular um acesso real à aplicação, identificando se o container está ativo ou se necessita do gatilho manual de restauração, garantindo total disponibilidade para a ferramenta.
