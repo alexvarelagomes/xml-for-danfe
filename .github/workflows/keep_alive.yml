@@ -8,8 +8,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  ping_app:
+  waker_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Reativar aplicação xml-for-danfe
-        run: curl -s https://xml-for-danfe.streamlit.app/_stcore/health
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+        
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install chromium
+          
+      - name: Executar o robô de reativação
+        run: python keep_alive.py
