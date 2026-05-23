@@ -9,7 +9,7 @@ def manter_ativo():
 
         page.goto("https://xml-for-danfe.streamlit.app/", wait_until="networkidle")     
 
-        botao_restaurar = page.locator("[data-testid='wakeup-button-owner']")
+        botao_restaurar = page.locator('//*[@id="root"]/div[1]/div/div/div/div/button')
         
         if botao_restaurar.is_visible():
             print("Aplicação em repouso detectada. Clicando no botão para reativar...")
